@@ -1,0 +1,39 @@
+.front {
+  background: #fff;
+  background-image: url('../../img/empty_bottle_front.jpg');
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-position: center 40px;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+}
+.logo {
+  background-image: url('../../img/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: 29%;
+  height: 15%;
+  left: 0;
+  position: absolute;
+  transition: 0.5s;
+  z-index: 3;
+  width: 100vw;
+}
+.logo.move {
+  bottom: -170px;
+}
+@media screen and (min-width:768px) {
+  .front {
+    background-size:  1300px 975px;
+  }
+  .logo {
+    bottom: 26%;
+    height: 110px;
+  }
+  .logo.move {
+    bottom: -170px;
+  }
+}
+

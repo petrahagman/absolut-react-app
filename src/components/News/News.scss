@@ -1,0 +1,122 @@
+.news {
+  background: linear-gradient(to bottom,rgba(200, 200, 200, 0.15),rgba(232, 232, 232, 0));
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  img {
+    bottom: -300px;
+    height: 30vh;
+    left: 50%;
+    position: absolute;
+    transition: 0.4s;
+  }
+  .products {
+    img:nth-child(1) {
+      left: 44%;
+      z-index: 1;
+    }
+    img:nth-child(2) {
+      left: 47%;
+      z-index: 2;
+    }
+    img:nth-child(3) {
+      left: 50%;
+      z-index: 1;
+    }
+  }
+  .move {
+    img {
+      bottom: 200px;
+    }
+    img:nth-child(1) {
+      left: 18%;
+      transition-delay: 0.15s;
+      transform: scale(1.5) rotate(-8deg);
+    }
+    img:nth-child(2) {
+      left: 40%;
+      transform: scale(1.7);
+    }
+    img:nth-child(3) {
+      left: 64%;
+      transition-delay: 0.25s;
+      transform: scale(1.5) rotate(8deg);
+    }
+  }
+  .heading {
+    background: #fff;
+    border: 2px solid #222;
+    box-sizing: border-box;
+    left: -500px;
+    line-height: 0.9;
+    margin: 0 5%;
+    position: absolute;
+    text-align: center;
+    top: -500px;
+    transition: 0.4s;
+    transform: rotate(-6deg);
+    width: 90vw;
+    z-index: 4;
+    h2 {
+      font-size: 2.5em;
+    }
+    span {
+      display: none;
+    }
+  }
+  .heading.move {
+    left: 0;
+    top: 75vh;
+  }
+}
+@media screen and (min-width:768px) {
+  .news {
+    img {
+      height: 35vh;
+    }
+    .move {
+      img {
+        bottom: 130px;
+      }
+      img:nth-child(1) {
+        left: 36%;
+      }
+      img:nth-child(2) {
+        left: 47%;
+      }
+      img:nth-child(3) {
+        left: 58%;
+      }
+    }
+    .heading {
+      background: none;
+      border: 0;
+      padding: 0;
+      transform: rotate(-30deg);
+      width: 300px;
+      h2 {
+        font-size: 4em;
+        margin-bottom: 10px;
+      }
+      span {
+        display: inline-block;
+        font-size: 4em;
+        padding-left: 140px;
+      }
+    }
+    .heading.move {
+      left: -2%;
+      top: 15%;
+    }
+  }
+}
+@media screen and (min-width:1200px) {
+  .news {
+    .heading.move {
+      left: 5%;
+    }
+  }
+}

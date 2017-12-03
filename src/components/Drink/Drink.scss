@@ -1,0 +1,104 @@
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  .drink {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 55vw;
+    .content {
+      margin-bottom: -8px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 3.2em;
+      line-height: 1;
+      margin-bottom: 25px;
+      transform: rotate(-7deg);
+    }
+    p {
+      font-size: 0.8em;
+      line-height: 0.9;
+    }
+    img {
+      height: 50vh;
+    }
+  }
+  .divider {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60px;
+    margin: 50px 0;
+    width: 60px;
+  }
+}
+.wrapper:nth-child(even) {
+  .divider {
+    background-image: url('../../img/lime.png');
+  }
+}
+.wrapper:nth-child(odd) {
+  .divider {
+    background-image: url('../../img/ice.png');
+  }
+}
+.wrapper:last-child {
+  .divider {
+    background-image: none;
+  }
+}
+.spin {
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@media screen and (min-width:1200px) {
+  .wrapper {
+    flex-direction: row;
+    .drink {
+      flex-direction: row;
+      height: 85vh;
+      .content {
+        min-width: 250px;
+        padding-right: 300px;
+        position: absolute;
+        z-index: 2;
+      }
+      h2 {
+        font-size: 4em;
+        margin-bottom: 25px;
+        margin-right: 50px;
+        transform: rotate(-7deg);
+      }
+      p {
+        font-size: 0.9em;
+      }
+      img {
+        height: 85vh;
+        margin-left: 150px;
+        position: relative;
+      }
+    }
+    .divider {
+      height: 100px;
+      margin-left: 50vw;
+      position: absolute;
+      width: 100px;
+      z-index: 3;
+    }
+  }
+}
+

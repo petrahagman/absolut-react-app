@@ -1,0 +1,23 @@
+/*****************
+       FONTS
+*****************/
+
+@import './assets/fonts.css';
+
+/*****************
+    BASE SETUP
+*****************/
+
+body {
+  background:
+  linear-gradient(135deg, #fff 22px, #f8f8f8 22px, #f8f8f8 24px, transparent 24px, transparent 67px, #f8f8f8 67px, #f8f8f8 69px, transparent 69px),
+  linear-gradient(225deg, #fff 22px, #f8f8f8 22px, #f8f8f8 24px, transparent 24px, transparent 67px, #f8f8f8 67px, #f8f8f8 69px, transparent 69px)0 64px;
+  background-color:#fff;
+  background-size: 64px 128px;
+  font-family: 'Playfair Display', serif;
+  overflow-x: hidden;
+  h1, h2 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 300;
+  }
+}
